@@ -12,11 +12,11 @@
 <body>
     
     <div class="container py-5">
-        <div action="script.php" method="get" class="form_content">
+        <form action="script.php" method="get" class="form_content">
             <label for="paragrafo" class="form-label">Inserisci una paragrafo:</label>
             <input type="text" name="paragrafo" id="paragrafo" class="form-control" placeholder="Scrivi qui:" aria-describedby="helpId">
             <button type="submit" class="btn btn-primary my-2">Invia il paragrafo</button>
-        </div>
+        </form>
     </div>
 
     <!--Scripts-->
