@@ -14,8 +14,11 @@ Il secondo file riceverà la richiesta ed eseguirà queste operazioni:
 
 <?php 
 
+$badWord = "Mannaggia";
 $paragrafo = $_GET['paragrafo'];
-$printParagraph = $paragrafo;
+$censura = str_replace($paragrafo, '***', $badWord);
+
+$printParagraph = "Nel paragrafo c'è scritto: $censura <br> Ed è lungo:" . strlen($censura) ."caratteri!";
 
 ?>
 
@@ -28,8 +31,10 @@ $printParagraph = $paragrafo;
     <title>Bad Words</title>
 </head>
 <body>
-    <h1>
-        <?php echo $paragrafo; ?>
-    </h1>
+<div class="print_words">
+            <p class="words">
+                <?php echo $censura; ?>
+            </p>
+        </div>
 </body>
 </html>
